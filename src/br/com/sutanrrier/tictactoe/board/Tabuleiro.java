@@ -9,7 +9,9 @@ public class Tabuleiro {
 	}
 	
 	public void mostrarTabuleiro() {
+		System.out.println("   A  B  C ");
 		for(int i=0;i<tabuleiro.length;i++) {
+			System.out.print((i+1) + " ");
 			for(int j=0; j<tabuleiro[i].length; j++) {
 				if(tabuleiro[i][j] == null) {
 					System.out.print(" - ");

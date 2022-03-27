@@ -36,7 +36,7 @@ public class ControladorDoJogo {
 	public void novoTurno() {
 		System.out.print("\n");
 		tabuleiro.mostrarTabuleiro();
-		informacoesJogadores();
+		exibirInformacoesJogadores();
 		System.out.println("\n---SEU TURNO ---\n");
 		System.out.print("Digite a posição em que deseja: ");
 		String jogada = sc.nextLine();
@@ -45,7 +45,7 @@ public class ControladorDoJogo {
 		computador.fazerJogada(jogada);
 	}
 	
-	public void informacoesJogadores() {
+	public void exibirInformacoesJogadores() {
 		System.out.println("\nUsuário: " + usuario.getTipo());
 		System.out.println("Computador: " + computador.getTipo());
 	}
