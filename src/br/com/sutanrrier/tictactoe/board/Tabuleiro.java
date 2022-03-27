@@ -9,7 +9,6 @@ public class Tabuleiro {
 	}
 	
 	public void mostrarTabuleiro() {
-		System.out.print("\n");
 		for(int i=0;i<tabuleiro.length;i++) {
 			for(int j=0; j<tabuleiro[i].length; j++) {
 				if(tabuleiro[i][j] == null) {

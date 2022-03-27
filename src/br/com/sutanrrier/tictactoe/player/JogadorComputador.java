@@ -19,9 +19,8 @@ public class JogadorComputador implements Jogador{
 	}
 
 	//Funções
-	public void fazerJogada() {
-		System.out.println("Jogada do Computador feita!");
-		
+	public void fazerJogada(String jogada) {
+		System.out.println("Jogada na posição " + jogada + " do Computador feita!");
 	}
 
 }

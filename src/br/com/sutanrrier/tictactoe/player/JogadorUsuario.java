@@ -19,9 +19,8 @@ public class JogadorUsuario implements Jogador{
 	}
 
 	//Funções
-	public void fazerJogada() {
-		System.out.println("Jogada feita!");
-		
+	public void fazerJogada(String jogada) {
+		System.out.println("Jogada na posição " + jogada + " feita!");
 	}
 
 }
