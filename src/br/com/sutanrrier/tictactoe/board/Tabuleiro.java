@@ -23,4 +23,8 @@ public class Tabuleiro {
 			System.out.print("\n");
 		}
 	}
+	
+	public void colocarPeca(int pos_x, int pos_y, String tipo_peca) {
+		tabuleiro[pos_y][pos_x] = tipo_peca;
+	}
 }

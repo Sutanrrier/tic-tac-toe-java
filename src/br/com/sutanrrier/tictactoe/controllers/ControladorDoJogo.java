@@ -37,12 +37,13 @@ public class ControladorDoJogo {
 		System.out.print("\n");
 		tabuleiro.mostrarTabuleiro();
 		exibirInformacoesJogadores();
+		
 		System.out.println("\n---SEU TURNO ---\n");
-		System.out.print("Digite a posição em que deseja: ");
-		String jogada = sc.nextLine();
-		//testes
-		usuario.fazerJogada(jogada);
-		computador.fazerJogada(jogada);
+		System.out.print("Digite a posição em que deseja (Ex: a 1): ");
+		char jogada_x = sc.next().toUpperCase().charAt(0);
+		int jogada_y = sc.nextInt();
+		
+		usuario.fazerJogada(tabuleiro, jogada_x, jogada_y);
 	}
 	
 	public void exibirInformacoesJogadores() {

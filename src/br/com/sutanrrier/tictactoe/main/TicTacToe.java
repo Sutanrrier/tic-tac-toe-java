@@ -7,8 +7,13 @@ public class TicTacToe {
 	public static void main(String[] args) {
 		ControladorDoJogo jogo = new ControladorDoJogo();
 		
+		boolean is_game_on = true;
+		
 		jogo.iniciarJogo();
-		jogo.novoTurno();
+		while(is_game_on) {
+			jogo.novoTurno();
+		}
+
 	}
 	
 }
