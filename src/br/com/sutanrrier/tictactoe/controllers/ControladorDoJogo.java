@@ -19,6 +19,11 @@ public class ControladorDoJogo {
 		tabuleiro = new Tabuleiro();
 		tabuleiro.criarTabuleiro();
 		definirTipoJogadores();
+		
+		//Já coloca uma peça caso o computador seja o jogador 1 (X)
+		if(computador.getTipo() == "X") {
+			computador.fazerJogada(tabuleiro, 'a', 0);
+		}
 	}
 
 	public void definirTipoJogadores() {
@@ -45,7 +50,7 @@ public class ControladorDoJogo {
 			char jogada_x = sc.next().toUpperCase().charAt(0);
 			int jogada_y = sc.nextInt();
 			usuario.fazerJogada(tabuleiro, jogada_x, jogada_y);
-			computador.fazerJogada(tabuleiro, jogada_x, jogada_y);
+			computador.fazerJogada(tabuleiro, 'a', 0);
 		}
 		catch (InputMismatchException e) {
 			System.out.println("Jogada inválida");
@@ -55,7 +60,6 @@ public class ControladorDoJogo {
 			System.out.println("Jogada inválida. Não existe essa posição no tabuleiro.");
 			novoTurno();
 		}
-
 	}
 	
 	public void exibirInformacoesJogadores() {
