@@ -1,5 +1,7 @@
 package br.com.sutanrrier.tictactoe.player;
 
+import java.util.Random;
+
 import br.com.sutanrrier.tictactoe.board.Tabuleiro;
 import br.com.sutanrrier.tictactoe.interfaces.Jogador;
 
@@ -21,7 +23,10 @@ public class JogadorComputador implements Jogador{
 
 	//Funções
 	public void fazerJogada(Tabuleiro tabuleiro, char jogada_x, int jogada_y) {
-		System.out.println("Jogada na posição do Computador feita!");
+		Random aleatorio = new Random();
+		int pos_x = aleatorio.nextInt(3);
+		int pos_y = aleatorio.nextInt(3);
+		tabuleiro.colocarPeca(pos_x, pos_y, tipo);
 		
 	}
 

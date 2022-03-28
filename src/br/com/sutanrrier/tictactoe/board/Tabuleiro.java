@@ -27,4 +27,8 @@ public class Tabuleiro {
 	public void colocarPeca(int pos_x, int pos_y, String tipo_peca) {
 		tabuleiro[pos_y][pos_x] = tipo_peca;
 	}
+	
+	public boolean isNullPosition(int pos_x, int pos_y) {
+		return (tabuleiro[pos_y][pos_x] == null) ? true : false;
+	}
 }
