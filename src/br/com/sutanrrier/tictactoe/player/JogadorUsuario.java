@@ -49,7 +49,7 @@ public class JogadorUsuario implements Jogador{
 			}
 		}
 		else {
-			throw new RuntimeException();
+			throw new InputMismatchException();
 		}
 	}
 

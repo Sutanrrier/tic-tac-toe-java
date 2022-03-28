@@ -26,8 +26,13 @@ public class JogadorComputador implements Jogador{
 		Random aleatorio = new Random();
 		int pos_x = aleatorio.nextInt(3);
 		int pos_y = aleatorio.nextInt(3);
-		tabuleiro.colocarPeca(pos_x, pos_y, tipo);
 		
+		while(!tabuleiro.isNullPosition(pos_x, pos_y)) {
+			pos_x = aleatorio.nextInt(3);
+			pos_y = aleatorio.nextInt(3);
+		}
+		
+		tabuleiro.colocarPeca(pos_x, pos_y, tipo);
 	}
 
 }

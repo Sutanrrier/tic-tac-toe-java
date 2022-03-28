@@ -11,7 +11,7 @@ public class TicTacToe {
 		
 		jogo.iniciarJogo();
 		while(is_game_on) {
-				jogo.novoTurno();
+			jogo.novoTurno();
 		}
 	}
 	
