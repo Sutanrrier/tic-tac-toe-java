@@ -58,15 +58,23 @@ public class ControladorDoJogo {
 				tabuleiro.mostrarTabuleiro();
 				System.out.println("\nVocê venceu o jogo!\n");
 			} 
-			else {
+			else if(!tabuleiro.isBoardFull()){
 				computador.fazerJogada(tabuleiro, 'a', 0);
 				if (tabuleiro.isGameOver(computador)) {
 					tabuleiro.mostrarTabuleiro();
 					System.out.println("\nComputador venceu o jogo!\n");
 				} 
-			else {
+				else if(!tabuleiro.isBoardFull()) {
 					novoTurno();
 				}
+				else {
+					tabuleiro.mostrarTabuleiro();
+					System.out.println("\nDeu velha! Ninguém venceu o jogo.\n");
+				}
+			}
+			else {
+				tabuleiro.mostrarTabuleiro();
+				System.out.println("\nDeu velha! Ninguém venceu o jogo.\n");
 			}
 		} 
 		catch (InputMismatchException e) {
