@@ -17,9 +17,6 @@ public class JogadorComputador implements Jogador{
 	public String getTipo() {
 		return tipo;
 	}
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
 
 	//Funções
 	public void fazerJogada(Tabuleiro tabuleiro, char jogada_x, int jogada_y) {

@@ -4,6 +4,6 @@ import br.com.sutanrrier.tictactoe.board.Tabuleiro;
 
 public interface Jogador {
 	
-	public abstract void fazerJogada(Tabuleiro tabuleiro, char jogada_x, int jogada_y);
-	
+	public void fazerJogada(Tabuleiro tabuleiro, char jogada_x, int jogada_y);
+	public String getTipo();
 }
