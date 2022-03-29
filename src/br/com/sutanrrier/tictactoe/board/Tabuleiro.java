@@ -50,7 +50,7 @@ public class Tabuleiro {
 		// Diagonal <-<-<-
 		for (int i = 0; i < tabuleiro.length; i++) {
 			for (int j = tabuleiro.length-1; j >= 0; j--) {
-				if (tabuleiro[i][j] == jogador.getTipo() && tabuleiro[i][i] != null) {
+				if (tabuleiro[i][j] == jogador.getTipo() && tabuleiro[i][j] != null) {
 					check_win++;
 					if (check_win == 3) {
 						return true;

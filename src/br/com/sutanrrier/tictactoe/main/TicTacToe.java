@@ -12,14 +12,14 @@ public class TicTacToe {
 		boolean is_game_on = true;
 
 		while (is_game_on) {
-			System.out.print("Você deseja iniciar uma nova partida? ('S' para sim e 'N' para não): ");
-			char option = sc.next().toUpperCase().charAt(0);
-			if (option == 'S') {
-				jogo.iniciarJogo();
-			} 
-			else {
-				is_game_on = false;
-			}
+				System.out.print("Você deseja iniciar uma nova partida? ('S' para sim e 'N' para não): ");
+				char option = sc.next().toUpperCase().charAt(0);
+				if (option == 'S') {
+					jogo.iniciarJogo();
+				} 
+				if (option == 'N') {
+					is_game_on = false;
+				}
 		}
 		sc.close();
 	}
